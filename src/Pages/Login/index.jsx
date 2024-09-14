@@ -93,7 +93,7 @@ const Login = () => {
 
     const verificaLogin = async () => {
         try{
-            const resposta = await axios.post('http://localhost:3000/login', {
+            const resposta = await axios.post('https://blognews-eight.vercel.app/login', {
                 nome,
                 senha
             });

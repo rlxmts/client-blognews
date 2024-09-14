@@ -7,7 +7,7 @@ export const AuthProvider = ({children}) => {
         const token = localStorage.getItem('token');
         if(token){
             try{
-                axios.get('http://localhost:3000/admin',{
+                axios.get('https://blognews-eight.vercel.app/admin',{
                     headers: {
                         Authorization: token,
                     },
@@ -15,7 +15,7 @@ export const AuthProvider = ({children}) => {
                 setAutenticado(true);
             }catch(erro){
                 setAutenticado(false);
-                console.log("Erro ao autenticar com o token salvo!");
+                console.log(`Erro ao autenticar com o token salvo: ${erro}`);
             }
         }else{
             setAutenticado(false);
