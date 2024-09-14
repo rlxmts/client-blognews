@@ -40,7 +40,7 @@ const Post = () => {
     useEffect(()=> {
         async function buscaLivro(){
             try{
-                const livro = await axios.get(`http://localhost:3000/posts/${parametro.id}`);
+                const livro = await axios.get(`https://server-blognews.vercel.app/posts/${parametro.id}`);
                 setLivroFiltrado(livro.data.postBuscado);
             }catch{
                 console.log("erro na busca!")

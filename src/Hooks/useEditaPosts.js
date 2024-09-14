@@ -12,7 +12,7 @@ export const useEditaPosts = ()=> {
 
         try{
             setCarregando(true);
-                await axios.put(`http://localhost:3000/posts/${id}`, {
+                await axios.put(`https://server-blognews.vercel.app/posts/${id}`, {
                 titulo: titulo,
                 texto: texto,
                 imagem: imagem

@@ -10,7 +10,7 @@ export const useBuscaPost = ()=> {
     useEffect(()=> {
         async function buscaApi(){
             try{
-                const apiConvertida = await axios.get("http://localhost:3000/posts");
+                const apiConvertida = await axios.get("https://server-blognews.vercel.app/posts");
                 setPosts(apiConvertida.data);
             }catch(error){
                 setErro(error);

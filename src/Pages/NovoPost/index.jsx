@@ -51,7 +51,7 @@ const NovoPost = () => {
     const enviarPost = (e) => {
         e.preventDefault();
 
-        axios.post('http://localhost:3000/posts', {
+        axios.post('https://server-blognews.vercel.app/posts', {
             titulo: titulo,
             texto: texto,
             imagem: imagem

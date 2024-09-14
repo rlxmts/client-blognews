@@ -11,7 +11,7 @@ export const useDeletaPost = () => {
         setCarregandoDeletar(true);
         try{
             const novaLista = posts.filter( post => post._id !== idPost);
-            await axios.delete(`http://localhost:3000/posts/${idPost}`);
+            await axios.delete(`https://server-blognews.vercel.app/posts/${idPost}`);
             setPosts(novaLista);
         }catch(erro){
             setErroDeletar(erro);
